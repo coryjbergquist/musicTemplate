@@ -47,6 +47,54 @@
  *
  * -------------------------------------------------------------------
  */
+
+/**
+ * CSS Custom Properties for Section Spacing
+ * -------------------------------------------------------------------
+ */
+:root {
+	--section-padding-top: 8rem;
+	--section-padding-bottom: 8rem;
+	--section-padding-top-mobile: 6rem;
+	--section-padding-bottom-mobile: 6rem;
+}
+
+/**
+ * Standardized Section Spacing Classes
+ * -------------------------------------------------------------------
+ */
+.main-section {
+	padding-top: 8rem; /* fallback */
+	padding-top: var(--section-padding-top);
+	padding-bottom: 8rem; /* fallback */
+	padding-bottom: var(--section-padding-bottom);
+}
+
+/* Section-specific modifier classes */
+.main-section.intro-section {
+	padding-top: 0; /* Intro section starts at top */
+}
+
+.main-section.footer-adjacent {
+	padding-bottom: 6rem; /* fallback */
+	padding-bottom: calc(var(--section-padding-bottom) * 0.75); /* Slightly less padding before footer */
+}
+
+/* Responsive media queries for mobile and tablet breakpoints */
+@media only screen and (max-width: 768px) {
+	.main-section {
+		padding-top: 6rem; /* fallback */
+		padding-top: var(--section-padding-top-mobile);
+		padding-bottom: 6rem; /* fallback */
+		padding-bottom: var(--section-padding-bottom-mobile);
+	}
+	
+	.main-section.footer-adjacent {
+		padding-bottom: 4.5rem; /* fallback */
+		padding-bottom: calc(var(--section-padding-bottom-mobile) * 0.75);
+	}
+}
+
 html {
 	font-size: 10px;
 }
