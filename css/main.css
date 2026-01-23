@@ -1024,7 +1024,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	background: #ebebeb;
 }
 .grey-section p.lead {
-	color: #7d7d7d;
+	color: #9f9f9f;
 }
 .section-intro {
 	max-width: 900px;
@@ -1037,7 +1037,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .section-intro h1 {
 	font-family: "poppins-semibold", serif;
 	font-size: 3.6rem;
-	color: #313131;
+	color: #747474;
 	line-height: 1.25;
 	margin-bottom: 1.2rem;
 }
@@ -1515,7 +1515,7 @@ header .logo a {
 .intro-info .lead {
 	text-align: left;
 	padding-left: 15rem;
-	color: black;
+	color: rgb(51, 51, 51);
 }
 
 .about-content {
@@ -1540,7 +1540,7 @@ header .logo a {
 }
 .about-content .info-list li strong {
 	font-family: "poppins-bold", sans-serif;
-	color: #313131;
+	color: #555555;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
 	font-size: 1.5rem;
@@ -1953,7 +1953,7 @@ header .logo a {
 	margin-left: -40px;
 }
 .section-ads h2 a, .section-ads h2 a:visited {
-	color: #313131;
+	color: #5a5a5a;
 }
 .section-ads span {
 	color: #3F0D39;
@@ -2086,7 +2086,7 @@ header .logo a {
 }
 #stats .icon-part i {
 	font-size: 4.8rem;
-	color: #000000;
+	color: #393939;
 }
 #stats .stat-count {
 	color: #FFFFFF;
