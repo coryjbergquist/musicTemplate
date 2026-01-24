@@ -145,8 +145,10 @@
 #booking input[type="text"],
 #booking input[type="email"],
 #booking textarea {
-	background: #3a3a3a; /* Dark grey background */
-	color: #ffffff; /* White text for contrast */
+	background: #3a3a3a;
+	/* Dark grey background */
+	color: #ffffff;
+	/* White text for contrast */
 	border: 2px solid #FF0077;
 	/* Thicker pink border for visibility */
 	border-radius: 6px;
@@ -159,7 +161,8 @@
 #booking input[type="text"]:focus,
 #booking input[type="email"]:focus,
 #booking textarea:focus {
-	background: #4a4a4a; /* Slightly lighter grey on focus */
+	background: #4a4a4a;
+	/* Slightly lighter grey on focus */
 	border-color: #FF0077;
 	box-shadow: 0 0 15px rgba(255, 0, 119, 0.5);
 	/* Stronger glow on focus */
@@ -170,9 +173,12 @@
 	background: #FF0077;
 	color: white;
 	border: none;
-	padding: 0 3rem; /* Remove vertical padding */
-	height: 4.8rem; /* Set explicit height */
-	line-height: 4.8rem; /* Match height for perfect vertical centering */
+	padding: 0 3rem;
+	/* Remove vertical padding */
+	height: 4.8rem;
+	/* Set explicit height */
+	line-height: 4.8rem;
+	/* Match height for perfect vertical centering */
 	border-radius: 6px;
 	font-family: "poppins-bold", sans-serif;
 	text-transform: uppercase;
@@ -208,7 +214,8 @@
 /* Ensure placeholder text is visible */
 #booking input::placeholder,
 #booking textarea::placeholder {
-	color: #bbb; /* Lighter placeholder text for dark background */
+	color: #bbb;
+	/* Lighter placeholder text for dark background */
 	opacity: 1;
 }
 
@@ -230,14 +237,16 @@
 	width: 100%;
 	height: 1px;
 	background: rgba(255, 255, 255, 0.2);
-	margin-top: 4rem; /* Half of section padding for balanced spacing */
+	margin-top: 4rem;
+	/* Half of section padding for balanced spacing */
 	margin-top: calc(var(--section-padding-bottom) * 0.5);
 }
 
 /* Responsive divider spacing */
 @media only screen and (max-width: 768px) {
 	#merch::after {
-		margin-top: 3rem; /* Half of mobile section padding */
+		margin-top: 3rem;
+		/* Half of mobile section padding */
 		margin-top: calc(var(--section-padding-bottom-mobile) * 0.5);
 	}
 }
@@ -283,7 +292,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	min-height: 300px; /* Ensure enough height for vertical centering */
+	min-height: 300px;
+	/* Ensure enough height for vertical centering */
 }
 
 #booking .section-intro .row .col-six:first-child h5 {
@@ -321,6 +331,7 @@
 	font-size: 1.6rem;
 	margin-bottom: 2rem;
 	color: #ffffff;
+	text-align: center;
 }
 
 .form-center form {
@@ -336,7 +347,7 @@
 }
 
 .form-center input[type="submit"] {
-	width: auto;
+	width: auto;rgb(18, 18, 18)rgb(18, 18, 18)
 	min-width: 150px;
 }
 
@@ -346,7 +357,8 @@
  */
 #live {
 	text-align: center;
-	background: #e8eef5; /* Light grey with a hint of blue */
+	background: #b8c9dd;
+	/* Light grey with a hint of blue */
 }
 
 #live .resume-header,
@@ -433,6 +445,21 @@
 #merch img {
 	display: block;
 	margin: 0 auto;
+}
+
+/**
+ * New Single Link Styling - Intro section
+ * -------------------------------------------------------------------
+ */
+#intro .intro-content h3 a {
+	color: #d8b2c5; /* White with a subtle pink tint */
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+#intro .intro-content h3 a:hover {
+	color: #FF0077; /* Pink on hover */
+	text-decoration: none;
 }
 
 /* Responsive improvements for contact form */
