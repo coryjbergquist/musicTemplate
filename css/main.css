@@ -362,8 +362,12 @@
  */
 #live {
 	text-align: center;
-	background: #b8c9dd;
-	/* Light grey with a hint of blue */
+	background: #e8eef5; /* Light grey with a hint of blue - restored to original color */
+	/* Ensure standard section padding is maintained */
+	padding-top: 8rem;
+	padding-top: var(--section-padding-top);
+	padding-bottom: 8rem;
+	padding-bottom: var(--section-padding-bottom);
 }
 
 #live .resume-header,
@@ -398,6 +402,16 @@
 #live a {
 	display: inline-block;
 	text-align: center;
+}
+
+/* Responsive padding for Live section */
+@media only screen and (max-width: 768px) {
+	#live {
+		padding-top: 6rem;
+		padding-top: var(--section-padding-top-mobile);
+		padding-bottom: 6rem;
+		padding-bottom: var(--section-padding-bottom-mobile);
+	}
 }
 
 /**
@@ -468,17 +482,25 @@
 }
 
 /**
- * Bloom Phase Title Styling - Keep h5 appearance for h3 with original pink color
+ * Bloom Phase Title Styling - h1 with pink color and larger size
  * -------------------------------------------------------------------
  */
-#intro .intro-content .col-twelve h3 {
-	font-size: 1.4rem;
-	line-height: 1.714;
+#intro .intro-content .col-twelve h1 {
+	font-size: 2.4rem; /* Larger than original h5 size but not too overwhelming */
+	line-height: 1.25; /* Adjusted for larger text */
 	text-transform: uppercase;
 	letter-spacing: .15rem;
 	font-family: "poppins-bold", sans-serif;
 	margin-bottom: 1.2rem;
-	color: #cc005f; /* Restored original pink color */
+	color: #cc005f; /* Keep original pink color */
+}
+
+/* Responsive sizing for mobile */
+@media only screen and (max-width: 600px) {
+	#intro .intro-content .col-twelve h1 {
+		font-size: 2rem; /* Slightly smaller on mobile */
+		letter-spacing: .1rem;
+	}
 }
 
 /* Responsive improvements for contact form */
