@@ -242,6 +242,68 @@
 	}
 }
 
+/**
+ * Merch Section Image Styling
+ * -------------------------------------------------------------------
+ */
+#merch .service-content img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	margin-top: 1rem;
+}
+
+#merch .service-content img:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+#merch .service-content h2 {
+	margin-bottom: 1rem;
+}
+
+#merch .service-content h2 a {
+	color: #FF0077;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+#merch .service-content h2 a:hover {
+	color: #cc005f;
+}
+
+/**
+ * Booking Section Text Alignment - Specific to booking info only
+ * -------------------------------------------------------------------
+ */
+#booking .section-intro .row .col-six:first-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	min-height: 300px; /* Ensure enough height for vertical centering */
+}
+
+#booking .section-intro .row .col-six:first-child h5 {
+	margin-bottom: 1rem;
+}
+
+#booking .section-intro .row .col-six:first-child p {
+	margin-bottom: 0;
+}
+
+/* Responsive adjustments for booking text alignment - specific to booking info */
+@media only screen and (max-width: 768px) {
+	#booking .section-intro .row .col-six:first-child {
+		min-height: auto;
+		margin-bottom: 3rem;
+		text-align: center;
+		align-items: center;
+	}
+}
+
 /* Responsive improvements for contact form */
 @media only screen and (max-width: 768px) {
 	#booking .row {
@@ -1800,7 +1862,7 @@ header .logo a {
  * -------------------------------------------------------------------
  */
 #intro {
-	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
+	background: #151515 url(../images/liveBlue.png) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
