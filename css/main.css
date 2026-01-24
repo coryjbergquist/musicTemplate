@@ -468,7 +468,7 @@
 }
 
 /**
- * Bloom Phase Title Styling - Keep h5 appearance for h3 but white color
+ * Bloom Phase Title Styling - Keep h5 appearance for h3 with original pink color
  * -------------------------------------------------------------------
  */
 #intro .intro-content .col-twelve h3 {
@@ -478,7 +478,7 @@
 	letter-spacing: .15rem;
 	font-family: "poppins-bold", sans-serif;
 	margin-bottom: 1.2rem;
-	color: #ffffff; /* White color for Bloom Phase title */
+	color: #cc005f; /* Restored original pink color */
 }
 
 /* Responsive improvements for contact form */
