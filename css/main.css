@@ -340,6 +340,101 @@
 	min-width: 150px;
 }
 
+/**
+ * Live Section Centering - Only affects #live section
+ * -------------------------------------------------------------------
+ */
+#live {
+	text-align: center;
+	background: #e8eef5; /* Light grey with a hint of blue */
+}
+
+#live .resume-header,
+#live .col-twelve,
+#live .timeline-wrap,
+#live .timeline-block,
+#live .timeline-header,
+#live .timeline-content {
+	text-align: center;
+}
+
+#live .timeline-wrap {
+	display: flex;
+	justify-content: center;
+}
+
+#live .timeline-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 600px;
+}
+
+#live h2,
+#live h3,
+#live h4 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#live a {
+	display: inline-block;
+	text-align: center;
+}
+
+/**
+ * Merch Section Centering - Only affects #merch section
+ * -------------------------------------------------------------------
+ */
+#merch {
+	text-align: center;
+}
+
+#merch .section-intro,
+#merch .services-content,
+#merch .col-twelve,
+#merch .col-six,
+#merch .service,
+#merch .service-content {
+	text-align: center;
+}
+
+#merch .services-content {
+	display: flex;
+	justify-content: center;
+}
+
+#merch .col-six {
+	display: flex;
+	justify-content: center;
+}
+
+#merch .service {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 500px;
+}
+
+#merch .service-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#merch h3,
+#merch h2 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#merch img {
+	display: block;
+	margin: 0 auto;
+}
+
 /* Responsive improvements for contact form */
 @media only screen and (max-width: 768px) {
 	#booking .row {
