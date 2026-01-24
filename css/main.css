@@ -145,9 +145,8 @@
 #booking input[type="text"],
 #booking input[type="email"],
 #booking textarea {
-	background: #ffffff;
-	/* Pure white background for maximum contrast */
-	color: #333;
+	background: #3a3a3a; /* Dark grey background */
+	color: #ffffff; /* White text for contrast */
 	border: 2px solid #FF0077;
 	/* Thicker pink border for visibility */
 	border-radius: 6px;
@@ -160,7 +159,7 @@
 #booking input[type="text"]:focus,
 #booking input[type="email"]:focus,
 #booking textarea:focus {
-	background: #ffffff;
+	background: #4a4a4a; /* Slightly lighter grey on focus */
 	border-color: #FF0077;
 	box-shadow: 0 0 15px rgba(255, 0, 119, 0.5);
 	/* Stronger glow on focus */
@@ -171,7 +170,9 @@
 	background: #FF0077;
 	color: white;
 	border: none;
-	padding: 1.5rem 3rem;
+	padding: 0 3rem; /* Remove vertical padding */
+	height: 4.8rem; /* Set explicit height */
+	line-height: 4.8rem; /* Match height for perfect vertical centering */
 	border-radius: 6px;
 	font-family: "poppins-bold", sans-serif;
 	text-transform: uppercase;
@@ -181,6 +182,8 @@
 	box-shadow: 0 4px 15px rgba(255, 0, 119, 0.3);
 	/* Button glow */
 	font-size: 1.4rem;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 #booking input[type="submit"]:hover {
@@ -205,7 +208,7 @@
 /* Ensure placeholder text is visible */
 #booking input::placeholder,
 #booking textarea::placeholder {
-	color: #888;
+	color: #bbb; /* Lighter placeholder text for dark background */
 	opacity: 1;
 }
 
@@ -215,6 +218,28 @@
 	padding: 2rem;
 	border-radius: 8px;
 	border: 1px solid rgba(255, 0, 119, 0.2);
+}
+
+/**
+ * Section Divider Line
+ * -------------------------------------------------------------------
+ */
+#merch::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: rgba(255, 255, 255, 0.2);
+	margin-top: 4rem; /* Half of section padding for balanced spacing */
+	margin-top: calc(var(--section-padding-bottom) * 0.5);
+}
+
+/* Responsive divider spacing */
+@media only screen and (max-width: 768px) {
+	#merch::after {
+		margin-top: 3rem; /* Half of mobile section padding */
+		margin-top: calc(var(--section-padding-bottom-mobile) * 0.5);
+	}
 }
 
 /* Responsive improvements for contact form */
