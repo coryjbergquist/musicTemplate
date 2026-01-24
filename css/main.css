@@ -1862,7 +1862,7 @@ header .logo a {
  * -------------------------------------------------------------------
  */
 #intro {
-	background: #151515 url(../images/liveBlue.png) no-repeat center 30%;
+	background: #151515 url(../images/liveBlue.png) no-repeat center 25%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
