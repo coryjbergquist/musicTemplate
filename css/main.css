@@ -63,10 +63,10 @@
  * -------------------------------------------------------------------
  */
 .main-section {
-	padding-top: 8rem;
+	padding-top: 4rem;
 	/* fallback */
 	padding-top: var(--section-padding-top);
-	padding-bottom: 8rem;
+	padding-bottom: 4rem;
 	/* fallback */
 	padding-bottom: var(--section-padding-bottom);
 }
