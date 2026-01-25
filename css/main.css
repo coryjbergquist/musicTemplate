@@ -63,9 +63,7 @@
  * -------------------------------------------------------------------
  */
 .main-section {
-	padding-top: 8rem;
-	/* fallback */
-	padding-top: var(--section-padding-top);
+	/* Remove top padding - no padding-top */
 	padding-bottom: 8rem;
 	/* fallback */
 	padding-bottom: var(--section-padding-bottom);
@@ -362,7 +360,8 @@
  */
 #live {
 	text-align: center;
-	background: #e8eef5; /* Light grey with a hint of blue - restored to original color */
+	background: #e8eef5;
+	/* Light grey with a hint of blue - restored to original color */
 	/* Remove duplicate padding - let main-section handle it */
 }
 
@@ -460,13 +459,15 @@
  * -------------------------------------------------------------------
  */
 #intro .intro-content h3 a {
-	color: #ffffff; /* White color for the link text */
+	color: #ffffff;
+	/* White color for the link text */
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
 
 #intro .intro-content h3 a:hover {
-	color: #FF0077; /* Pink on hover */
+	color: #FF0077;
+	/* Pink on hover */
 	text-decoration: none;
 }
 
@@ -475,19 +476,23 @@
  * -------------------------------------------------------------------
  */
 #intro .intro-content .col-twelve h1 {
-	font-size: 2.4rem; /* Larger than original h5 size but not too overwhelming */
-	line-height: 1.25; /* Adjusted for larger text */
+	font-size: 2.4rem;
+	/* Larger than original h5 size but not too overwhelming */
+	line-height: 1.25;
+	/* Adjusted for larger text */
 	text-transform: uppercase;
 	letter-spacing: .15rem;
 	font-family: "poppins-bold", sans-serif;
 	margin-bottom: 1.2rem;
-	color: #cc005f; /* Keep original pink color */
+	color: #cc005f;
+	/* Keep original pink color */
 }
 
 /* Responsive sizing for mobile */
 @media only screen and (max-width: 600px) {
 	#intro .intro-content .col-twelve h1 {
-		font-size: 2rem; /* Slightly smaller on mobile */
+		font-size: 2rem;
+		/* Slightly smaller on mobile */
 		letter-spacing: .1rem;
 	}
 }
@@ -514,9 +519,7 @@
 /* Responsive media queries for mobile and tablet breakpoints */
 @media only screen and (max-width: 768px) {
 	.main-section {
-		padding-top: 6rem;
-		/* fallback */
-		padding-top: var(--section-padding-top-mobile);
+		/* Remove mobile top padding - no padding-top */
 		padding-bottom: 6rem;
 		/* fallback */
 		padding-bottom: var(--section-padding-bottom-mobile);
