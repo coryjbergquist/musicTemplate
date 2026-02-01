@@ -285,13 +285,19 @@
  * Booking Section Text Alignment - Specific to booking info only
  * -------------------------------------------------------------------
  */
-#booking .section-intro .row .col-six:first-child {
+#booking .section-intro .row {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	min-height: 300px;
-	/* Ensure enough height for vertical centering */
+	align-items: stretch; /* Make both columns same height */
+	min-height: 300px; /* Ensure minimum height for centering effect */
+}
+
+#booking .section-intro .row .col-six:first-child {
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: center !important;
+	align-items: flex-start !important;
+	margin-top: 0 !important; /* Override any margin-top from grid system */
+	padding-top: 0 !important; /* Override any padding-top */
 }
 
 #booking .section-intro .row .col-six:first-child h5 {
@@ -304,6 +310,11 @@
 
 /* Responsive adjustments for booking text alignment - specific to booking info */
 @media only screen and (max-width: 768px) {
+	#booking .section-intro .row {
+		flex-direction: column;
+		min-height: auto;
+	}
+	
 	#booking .section-intro .row .col-six:first-child {
 		min-height: auto;
 		margin-bottom: 3rem;
@@ -397,6 +408,43 @@
 #live a {
 	display: inline-block;
 	text-align: center;
+}
+
+/* Remove extra spacing below Live heading */
+#live h2 {
+	margin-bottom: 0.2rem;
+	/* Minimal margin below Live heading */
+}
+
+#live .col-twelve:first-child {
+	margin-bottom: 0.5rem;
+	/* Reduce spacing after Live heading container */
+}
+
+#live .col-twelve:last-child h3 {
+	margin-top: 0;
+	/* Remove any top margin from Upcoming Shows */
+	margin-bottom: 1rem;
+	/* Keep some bottom margin */
+	text-decoration: underline;
+	/* Add underline to Upcoming Shows */
+	text-decoration-color: #000000;
+	/* Ensure underline is black */
+	text-decoration-thickness: 2px;
+	/* Make underline thicker and more visible */
+	text-underline-offset: 4px;
+	/* Add some space between text and underline */
+}
+
+#live .timeline-wrap {
+	margin-top: 0;
+	/* Remove any top margin from timeline wrapper */
+}
+
+/* Remove top margin from the div containing venue information */
+#live .col-twelve:last-child {
+	margin-top: 0;
+	/* Remove top margin from venue info container */
 }
 
 /* Responsive padding for Live section - removed duplicate padding */
@@ -514,6 +562,13 @@
 		width: 100%;
 		box-sizing: border-box;
 	}
+}
+
+/* Ensure booking form inputs take full width */
+#booking input[type="text"],
+#booking input[type="email"] {
+	width: 100% !important;
+	box-sizing: border-box;
 }
 
 /* Responsive media queries for mobile and tablet breakpoints */
@@ -2066,6 +2121,20 @@ header .logo a {
 	text-align: center;
 }
 
+/* Fix background attachment for mobile devices */
+@media only screen and (max-width: 768px) {
+	#intro {
+		background-attachment: scroll;
+		background-position: center center;
+		/* Ensure background covers the full area on mobile */
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		/* Prevent background from repeating */
+		background-repeat: no-repeat;
+	}
+}
+
 .intro-overlay {
 	position: absolute;
 	top: 0;
@@ -2216,6 +2285,8 @@ header .logo a {
 @media only screen and (max-width:768px) {
 	#intro {
 		min-height: 660px;
+		background-attachment: scroll;
+		background-position: center center;
 	}
 
 	.intro-content h1 {
@@ -2242,6 +2313,13 @@ header .logo a {
 @media only screen and (max-width:600px) {
 	#intro {
 		min-height: 600px;
+		background-attachment: scroll;
+		background-position: center center;
+		/* Ensure background is always visible on small screens */
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
 	.intro-content h1 {
@@ -3438,3 +3516,123 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+/
+**
+ * Contact Form Full Width Inputs
+ * -------------------------------------------------------------------
+ */
+#contactform input[type="text"],
+#contactform input[type="email"] {
+	width: 100% !important;
+	box-sizing: border-box !important;
+	display: block !important;
+}
+
+/* Alternative selector in case the form is in booking section */
+#booking form input[type="text"],
+#booking form input[type="email"] {
+	width: 100% !important;
+	box-sizing: border-box !important;
+	display: block !important;
+}
+
+/* General form input width fix for any form in booking section */
+#booking input[type="text"],
+#booking input[type="email"] {
+	width: 100% !important;
+	box-sizing: border-box !important;
+	display: block !important;
+}/**
+
+ * Booking Section Horizontal Centering - Enhanced
+ * -------------------------------------------------------------------
+ */
+#booking {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#booking .section-intro {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	max-width: 1200px; /* Limit max width for better centering */
+	margin: 0 auto;
+}
+
+#booking .row {
+	justify-content: center;
+	text-align: center;
+	display: flex;
+	align-items: stretch;
+	width: 100%;
+	max-width: 1000px; /* Constrain width for better centering */
+	margin: 0 auto;
+}
+
+#booking .col-six {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#booking h5,
+#booking p {
+	text-align: center;
+}
+
+#booking form {
+	text-align: center;
+	width: 100%;
+	max-width: 400px; /* Limit form width for better appearance */
+}/**
+ 
+* New Single Link Text Styling - Make text white
+ * -------------------------------------------------------------------
+ */
+#intro .col-twelve a h3 {
+	color: #ffffff !important; /* Make the single text white */
+}
+
+#intro .col-twelve a h3:hover {
+	color: #FF0077 !important; /* Pink on hover for interaction feedback */
+}/*
+*
+ * Larger Instagram and TikTok Icons
+ * -------------------------------------------------------------------
+ */
+.footer-social .fab.fa-instagram,
+.footer-social .fab.fa-tiktok {
+	font-size: 2.4rem !important; /* Make icons larger - default is usually around 1.6rem */
+}
+
+/* Alternative selector in case icons are elsewhere */
+.fab.fa-instagram,
+.fab.fa-tiktok {
+	font-size: 2.4rem !important;
+}
+
+/* Hover effect to make them even more prominent */
+.footer-social .fab.fa-instagram:hover,
+.footer-social .fab.fa-tiktok:hover {
+	font-size: 2.6rem !important;
+	transition: font-size 0.3s ease;
+}
+/**
+ * New Single Link Text Styling - White text with subtle pink shadow
+ * -------------------------------------------------------------------
+ */
+#intro .col-twelve a h3 {
+	color: #ffffff !important; /* Make the single text white */
+	text-shadow: 2px 2px 4px rgba(255, 0, 119, 0.3) !important; /* Subtle pink shadow */
+}
+
+#intro .col-twelve a h3:hover {
+	color: #FF0077 !important; /* Pink on hover for interaction feedback */
+	text-shadow: 2px 2px 6px rgba(255, 0, 119, 0.5) !important; /* Stronger pink shadow on hover */
+}
